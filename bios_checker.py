@@ -24,6 +24,9 @@ driver.get(url)
 # get the HTML source code
 html = driver.page_source
 
+# close the driver
+driver.quit()
+
 # parse the HTML content using BeautifulSoup
 soup = BeautifulSoup(html, "html.parser")
 
@@ -38,9 +41,6 @@ latest_bios_ver_td = table.find("td")
 bios_version = latest_bios_ver_td.text
 
 print(f'Current latest BIOS: {bios_version}')
-
-# close the driver
-driver.close()
 
 # load the previous bios version from a json file (or set it to None if not found)
 try:

@@ -16,7 +16,7 @@ if not exist .venv (
   echo .venv folder exists
 )
 
-cmd.exe /k ".venv\Scripts\activate.bat & pyinstaller --noconfirm --onefile --console --icon bios_checker.ico --collect-all win10toast bios_checker.py & exit"
+cmd.exe /k ".venv\Scripts\activate.bat & pyinstaller --noconfirm --onefile --console --icon bios_checker.ico --collect-all win10toast --collect-all selenium bios_checker.py & exit"
 
 rmdir /S /Q build
 del /q bios_checker.spec
