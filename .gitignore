@@ -1,2 +1,4 @@
 .venv/
 dist/
+bios_version.json
+**/bios_version.json
